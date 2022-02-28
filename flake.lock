@@ -57,16 +57,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1645987918,
-        "narHash": "sha256-9JhpZtvAaSA9gh+qE4fdNp+KkOqZcMKlLmL9TVijk4c=",
-        "owner": "yusdacra",
+        "lastModified": 1646025135,
+        "narHash": "sha256-BU0wQT+KSv87bM1OT+o+ijML05J9aqyNlsoE7Cxu3tI=",
+        "owner": "nix-community",
         "repo": "dream2nix",
-        "rev": "c580c24b82ff6cc12e3493c045ed227d43428ab5",
+        "rev": "31ff31b90117186fa8faf1484f76133f05bdb0e6",
         "type": "github"
       },
       "original": {
-        "owner": "yusdacra",
-        "ref": "rust/crane-builder",
+        "owner": "nix-community",
+        "ref": "main",
         "repo": "dream2nix",
         "type": "github"
       }
@@ -113,11 +113,11 @@
     "rustOverlay": {
       "flake": false,
       "locked": {
-        "lastModified": 1645928338,
-        "narHash": "sha256-pNbkG19Nb4QTNRCIWwxv06JKKJNCUrDzgRrriEd7W1A=",
+        "lastModified": 1646014761,
+        "narHash": "sha256-HdXvdU+wV+E1nNzG2vaQsUuBJQID3AB3BX88N8lA37M=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "4f6e6588b07427cd8ddc99b664bf0fab02799804",
+        "rev": "c7d9566796b3ad5b257e187e1628488c7429b89e",
         "type": "github"
       },
       "original": {
