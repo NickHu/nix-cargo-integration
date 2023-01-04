@@ -9,6 +9,10 @@
       url = "github:oxalica/rust-overlay";
       flake = false;
     };
+    crate2nix = {
+      url = "github:kolloch/crate2nix";
+      flake = false;
+    };
   };
 
   outputs = inputs: with inputs;
@@ -20,11 +24,6 @@
         url = "https://github.com/yusdacra/naersk.git";
         ref = "feat/cargolock-git-deps";
         rev = "8616a0dc9f4f87f6cb8b55c91bc2bd69bc12ba03";
-      };
-      crate2nix = builtins.fetchGit {
-        url = "https://github.com/yusdacra/crate2nix.git";
-        ref = "feat/builtinfetchgit";
-        rev = "679ca8b20e4edea1659597ad727a65738b6c1a32";
       };
       preCommitHooks = builtins.fetchGit {
         url = "https://github.com/cachix/pre-commit-hooks.nix.git";
@@ -39,7 +38,7 @@
 
       libb = import "${nixpkgs}/lib/default.nix";
       lib = import ./src/lib.nix {
-        sources = { inherit rustOverlay devshell nixpkgs naersk crate2nix dream2nix preCommitHooks; };
+        sources = { inherit rustOverlay devshell nixpkgs naersk dream2nix preCommitHooks; inherit (inputs) crate2nix; };
       };
       hashes = {
         basic-bin = "sha256-LvziPSGSAtdUeM4NZcD9qQjyMJ+n7EmutJVc+vcF1tI=";

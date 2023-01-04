@@ -76,7 +76,6 @@ let
           # Use crate2nix source from nixpkgs and the original Rust toolchain from nixpkgs if
           # the user wants to use crate2nix from nixpkgs
           crate2nixTools = import "${sources.crate2nix}/tools.nix" {
-            inherit useCrate2NixFromPkgs;
             pkgs = if useCrate2NixFromPkgs then import sources.nixpkgs { inherit system; } else prev;
           };
         })
